@@ -1,0 +1,516 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(18, 21, 27);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    font-size: 1rem;
+    z-index: 999;
+    /* navbar will always be on top */
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_home {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 30px;
+    margin-top: 25px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item {
+    height: 80px; /* what's the point?*/
+}
+
+.navbar_links {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 100%;
+    color: white;
+}
+
+.navbar_links:hover {
+    color: #e58f7e; 
+    transition: all 1s ease;
+}
+
+#navbar_home:hover {
+    color: #e58f7e; 
+    transition: all 1s ease;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+}
+
+.navbar_menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background: #21222a;
+}
+
+.navbar_menu.active { /* javascript */
+    background: #21222a;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+}
+
+#navbar_home {
+    padding-left: 25px;
+}
+
+.navbar_toggle .bar { /* javascript */
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+.navbar_item {
+    width: 100%;
+}
+
+.navbar_links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+.navbar_toggle .bar { 
+    display: block;
+    cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+/* ❌❌ profile ❌❌*/
+body {
+    background-color: rgb(18, 21, 27);
+}
+
+#first {
+    display: flex;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+#second {
+    display: flex;
+    font-size: 35px;
+}
+
+#first, #second {
+    display: flex;
+    color: #e58f7e;
+    padding-left: 30px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    max-height: 400px;
+    display: flex;
+    object-fit: cover;   
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    margin-bottom: 300px;
+    /* takes up entire screen */
+    height: 35vh;
+}
+
+
+
+
+
+
+
+
+/* ❌❌ about me ❌❌ */
+#about-container {
+    height: 600px;
+    /* overflow: auto; */
+    width: 100%;
+}
+
+#about {
+    margin-left: 10%;
+    color: #e58f7e;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.about-para {
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 10%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    line-height: 40px;
+}
+
+.color {
+    color: #e58f7e;
+}
+
+#santa-monica {
+    height: 0;
+}
+
+/* ❌❌ projects ❌❌ */
+#projects-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 150px;
+    height: 500px;
+    background-color: #21222a;
+}
+
+#projects {
+    text-align: center;
+    padding: 20px;
+    color: #e58f7e;
+    font-weight: lighter;
+}
+
+#projects-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+
+
+
+
+/* ❌❌ skills ❌❌ */
+#skills-container {
+    margin: 30px;
+    height: 550px;
+}
+
+#skills-container h1 {
+    color: #e58f7e;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#skills-container h2 {
+    color: white;
+    font-weight: lighter;
+    margin-top: 30px;
+}
+
+#html{
+    color: white;
+    margin-top: 10px;
+}
+
+#freecodecamp {
+    color: white;
+    text-decoration: none;
+}
+
+#freecodecamp:hover {
+    color: #e58f7e;
+}
+
+#certifications, #langs {
+    margin-left: 25px;
+    margin-top: 10px;
+    color: white;
+    line-height: 25px;
+}
+
+
+
+
+
+/* ❌❌ contact ❌❌ */
+
+.contact-container {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: #21222a;
+}
+
+#h1-connect {
+    color: #e58f7e;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+#h2-connect {
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+#email {
+    margin-top: 10px;
+    color: white;
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#ig {
+    height: 50px;
+    padding-left: 22px;
+    padding-right: 17px;
+}
+
+#in {
+    height: 60px;
+    padding-top: 5px;
+}
+
+/* move this down slightly?? */
+#git {
+    height: 60px;
+    margin-top: 10px;
+}
+
+
+
+
+/* ❌ tablet screens ❌ */
+@media only screen and (min-width: 768px) {
+    #first {
+        display: flex;
+        font-size: 80px;
+        padding-top: 50px;
+    }
+    
+    #second {
+        display: flex;
+        font-size: 50px;
+    }
+    
+    #first, #second {
+        display: flex;
+        color: #e58f7e;
+        padding-left: 30px;
+    }
+    
+    .profile-pic {
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        max-height: 400px;
+        display: flex;
+        object-fit: cover;   
+    }
+    
+    .profile-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 200px;
+        margin-bottom: 300px;
+        /* takes up entire screen */
+        height: 35vh;
+    }
+    
+    /* ❌ about me ❌ */
+    #about-container {
+        height: 600px;
+        overflow: auto;
+        width: 100%;
+    }
+    
+    #about {
+        margin-left: 50%;
+        color: #e58f7e;
+        font-weight: lighter;
+        font-size: 40px;
+    }
+    
+    .about-para {
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 50%;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        line-height: 40px;
+    }
+    
+    .color {
+        color: #e58f7e;
+    }
+    
+    /* get stupid picture to move up */
+    #santa-monica {
+        height: 450px;
+        margin-left: 40px;
+        border-radius: 5%;
+    }
+}
+
+
+
+
+
+
+/* laptop screens */
+/* where did my nav-bar go? */
+@media only screen and (min-width: 960px) {
+    #mobile-menu {
+        display: none;
+    }
+
+    #first {
+        display: flex;
+        font-size: 80px;
+        padding-top: 50px;
+    }
+    
+    #second {
+        display: flex;
+        font-size: 50px;
+    }
+    
+    #first, #second {
+        display: flex;
+        color: #e58f7e;
+        padding-left: 70px;
+    }
+    
+    .profile-pic {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        max-height: 400px;
+        display: flex;
+        object-fit: cover;   
+    }
+    
+    .profile-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 200px;
+        margin-bottom: 300px;
+        /* takes up entire screen */
+        height: 35vh;
+    }
+    
+    /* ⭐️⭐️ about me ⭐️⭐️ */
+    #about-container {
+        height: 600px;
+        overflow: auto;
+        width: 100%;
+    }
+    
+    #about {
+        margin-left: 50%;
+        color: #e58f7e;
+        font-weight: lighter;
+        font-size: 50px;
+    }
+    
+    .about-para {
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 50%;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        line-height: 40px;
+    }
+    
+    .color {
+        color: #e58f7e;
+    }
+    
+    #santa-monica {
+        height: 500px;
+    }
+}
