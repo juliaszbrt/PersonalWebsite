@@ -202,16 +202,18 @@ body {
 
 /* ❌❌ about me ❌❌ */
 #about-container {
-    height: 600px;
+    height: 650px;
     /* overflow: auto; */
     width: 100%;
+    /* display: flex; */
 }
 
 #about {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     color: #e58f7e;
     font-weight: lighter;
     font-size: 40px;
+    text-align: center;
 }
 
 .about-para {
@@ -219,11 +221,11 @@ body {
     font-weight: lighter;
     font-size: 20px;
     margin-top: 15px;
-    margin-left: 10%;
-    margin-right: 50px;
-    margin-bottom: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
     display: flex;
     line-height: 40px;
+    text-align: center;
 }
 
 .color {
@@ -231,7 +233,13 @@ body {
 }
 
 #santa-monica {
-    height: 0;
+    height: 350px;
+    position: absolute;
+    top: 1100px;
+    left: 50%;
+    margin-left: -140px;
+    border-radius: 10%;
+    margin-top: 3%;
 }
 
 /* ❌❌ projects ❌❌ */
@@ -398,27 +406,28 @@ body {
     /* ❌ about me ❌ */
     #about-container {
         height: 600px;
-        overflow: auto;
         width: 100%;
+        display: flex;
+        /* justify-content: center; */
     }
     
     #about {
-        margin-left: 50%;
         color: #e58f7e;
         font-weight: lighter;
         font-size: 40px;
+        text-align: left;
+        margin-left: 50%;
     }
     
     .about-para {
         color: white;
         font-weight: lighter;
         font-size: 20px;
-        margin-top: 15px;
-        margin-left: 50%;
-        margin-right: 50px;
-        margin-bottom: 20px;
         display: flex;
         line-height: 40px;
+        text-align: left;
+        margin-left: 50%;
+        margin-right: 10%;
     }
     
     .color {
@@ -428,8 +437,12 @@ body {
     /* get stupid picture to move up */
     #santa-monica {
         height: 450px;
-        margin-left: 40px;
-        border-radius: 5%;
+        /* margin-left: 40px; */
+        border-radius: 10%;
+        display: flex;
+        position: relative;
+        top: -50px;
+        left: 240px;
     }
 }
 
@@ -483,26 +496,29 @@ body {
     /* ⭐️⭐️ about me ⭐️⭐️ */
     #about-container {
         height: 600px;
-        overflow: auto;
+        /* overflow: auto; */
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     
     #about {
-        margin-left: 50%;
+        /* margin-left: 50%; */
         color: #e58f7e;
         font-weight: lighter;
         font-size: 50px;
+        margin-left: 40%;
     }
     
     .about-para {
         color: white;
         font-weight: lighter;
         font-size: 20px;
-        margin-top: 15px;
-        margin-left: 50%;
+        /* margin-top: 15px;
         margin-right: 50px;
-        margin-bottom: 20px;
-        display: flex;
+        margin-bottom: 20px; */
+        /* display: flex; */
+        margin-left: 40%;
         line-height: 40px;
     }
     
@@ -511,6 +527,6 @@ body {
     }
     
     #santa-monica {
-        height: 500px;
+        height: 450px;
     }
 }
