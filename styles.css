@@ -1,31 +1,31 @@
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body{
+    padding-left: auto;
+    
+    margin:auto;
+}
+
 .navbar {
+    display: inline-block;
     background-color: rgb(18, 21, 27);
     height: 80px;
-    display: flex;
+
     justify-content: center;
     align-items: center;
     position: sticky;
     top: 0;
     font-size: 1rem;
     z-index: 999;
-    /* navbar will always be on top */
-}
-
-.navbar_container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
     width: 100%;
-    max-width: 1300px;
-    z-index: 1;
-    margin: 0 auto;
-    padding: 0 50px;
+    margin: auto;
+    padding: 0;
+    /* navbar will always be on top */
 }
 
 #navbar_home {
@@ -34,17 +34,12 @@
     align-items: center;
     height: 30px;
     margin-top: 25px;
-}
-
-.navbar_menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
+    padding-left: 25px;
 }
 
 .navbar_item {
-    height: 80px; /* what's the point?*/
+    height: 80px; /* what's the point? */
+    width: 100%;
 }
 
 .navbar_links {
@@ -59,12 +54,12 @@
 
 .navbar_links:hover {
     color: #e58f7e; 
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
 }
 
 #navbar_home:hover {
     color: #e58f7e; 
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
 }
 
 .navbar_container {
@@ -78,14 +73,16 @@
 }
 
 .navbar_menu {
+    list-style: none;
+    text-align: center;
     display: grid;
     grid-template-columns: auto;
     margin: 0;
     width: 100%;
     position: absolute;
     top: -1000px;
-    opacity: 0;
-    transition: all 0.5s ease;
+    opacity: 1;
+    /* transition: all 0.5s ease; */
     height: 50vh;
     z-index: -1;
     background: #21222a;
@@ -95,26 +92,18 @@
     background: #21222a;
     top: 100%;
     opacity: 1;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
     z-index: 99;
     height: 50vh;
     font-size: 1.6rem;
 }
-
-#navbar_home {
-    padding-left: 25px;
-}
-
+/* literally hamburger menu bars*/
 .navbar_toggle .bar { /* javascript */
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
     background: white;
-}
-
-.navbar_item {
-    width: 100%;
 }
 
 .navbar_links {
@@ -452,12 +441,27 @@ body {
 
 
 /* laptop screens */
-/* where did my nav-bar go? */
+/* why page so big? */
 @media only screen and (min-width: 960px) {
     #mobile-menu {
         display: none;
     }
-
+    .navbar_menu {
+        background: transparent;
+        top: 0;
+        opacity: 1;
+        z-index: 99;
+        height: 50vh;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-end;  
+        width: 98%;
+    }
+    .navbar_item{
+        height: 0px;
+        width: 100px;
+        display: flex;
+    }
     #first {
         display: flex;
         font-size: 80px;
